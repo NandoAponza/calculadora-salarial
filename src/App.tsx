@@ -10,6 +10,8 @@ import { ProyeccionAnualPanel } from './components/ProyeccionAnualPanel';
 import { ComparadorPanel } from './components/ComparadorPanel';
 import { HistoricoPanel } from './components/HistoricoPanel';
 import { PanelParamsLegales } from './components/PanelParamsLegales';
+import { InstallPrompt } from './components/InstallPrompt';
+import { UpdatePrompt } from './components/UpdatePrompt';
 import { calcularNomina } from './calculators/nomina';
 import { calcularLiquidacion } from './calculators/liquidacion';
 import { calcularIndependienteUSD, calcularEmpleadoUSD } from './calculators/dolares';
@@ -235,6 +237,8 @@ export default function App() {
           Calculadora informativa · Valores 2026: SMMLV Decreto 1469/2025 · UVT Resolución DIAN 000238/2025 · TRM Superfinanciera · Actualizar anualmente
         </footer>
       </div>
+      <InstallPrompt />
+      <UpdatePrompt />
     </div>
   );
 }

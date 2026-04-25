@@ -2,14 +2,43 @@
 
 Aplicación web local para calcular nómina, liquidación y proyección anual bajo la legislación laboral colombiana.
 
-## Inicio rápido
+## App en producción
+
+https://calculadora-salarial-co.netlify.app/
+
+## Inicio rápido (desarrollo local)
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abre http://localhost:5173
+Abre http://localhost:5200
+
+## Instalar como app (PWA)
+
+### Android (Chrome)
+1. Abre https://calculadora-salarial-co.netlify.app/ en Chrome
+2. Toca el menú ⋮ → **"Agregar a pantalla de inicio"**
+3. La app aparece en tu pantalla de inicio y funciona sin internet
+
+### iOS (Safari)
+1. Abre https://calculadora-salarial-co.netlify.app/ en Safari
+2. Toca el botón **Compartir** (cuadrado con flecha ↑)
+3. Desplázate y toca **"Agregar a inicio"**
+4. La app queda instalada en tu pantalla de inicio
+
+### Escritorio (Chrome / Edge)
+1. Abre la URL en Chrome o Edge
+2. Clic en el ícono de instalación en la barra de direcciones (o usa el banner que aparece)
+3. La app se instala como aplicación nativa
+
+> **Funciona 100% offline** después de la primera carga. Todos los cálculos son locales.
+
+## Íconos
+
+Los íconos en `public/icons/` son placeholders generados con System.Drawing (fondo azul + símbolo $).
+Para reemplazarlos con arte final: genera PNGs de 192×192, 512×512 y 512×512 (maskable) y cópialos en esa carpeta.
 
 ## Tests
 
