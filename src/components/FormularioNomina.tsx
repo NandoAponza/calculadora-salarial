@@ -78,7 +78,7 @@ export function FormularioNomina({ inputs, onChange }: Props) {
             <select
               value={inputs.nivelARL}
               onChange={e => set('nivelARL', parseInt(e.target.value) as NivelARL)}
-              className="rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-1.5 text-sm"
+              className="rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2.5 text-sm"
             >
               <option value={1}>I — 0.522% (oficinas, comercio)</option>
               <option value={2}>II — 1.044% (procesos leves)</option>
@@ -113,7 +113,7 @@ export function FormularioNomina({ inputs, onChange }: Props) {
             <select
               value={inputs.numeroDependientes}
               onChange={e => set('numeroDependientes', parseInt(e.target.value))}
-              className="rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm px-3 py-1.5 text-gray-900 dark:text-gray-100"
+              className="rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm px-3 py-2.5 text-gray-900 dark:text-gray-100"
             >
               {[0,1,2,3,4].map(n => <option key={n} value={n}>{n}</option>)}
             </select>

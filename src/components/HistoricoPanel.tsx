@@ -48,13 +48,13 @@ export function HistoricoPanel({ entradas, onEliminar, onCargar }: Props) {
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-gray-50 dark:bg-gray-700/50 border-b border-gray-200 dark:border-gray-700">
-              <th className="text-left px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">Fecha</th>
-              <th className="text-left px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">Etiqueta</th>
-              <th className="text-right px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">Salario básico</th>
+              <th className="hidden sm:table-cell text-left px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">Fecha</th>
+              <th className="hidden sm:table-cell text-left px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">Etiqueta</th>
+              <th className="hidden md:table-cell text-right px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">Salario básico</th>
               <th className="text-right px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">Neto empleado</th>
               <th className="text-right px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">Δ neto</th>
-              <th className="text-right px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">RteFte</th>
-              <th className="text-right px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">Costo empresa</th>
+              <th className="hidden md:table-cell text-right px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">RteFte</th>
+              <th className="hidden md:table-cell text-right px-4 py-2 text-gray-500 dark:text-gray-400 font-medium">Costo empresa</th>
               <th className="px-4 py-2" />
             </tr>
           </thead>
@@ -71,13 +71,13 @@ export function HistoricoPanel({ entradas, onEliminar, onCargar }: Props) {
                     i % 2 === 0 ? 'bg-white dark:bg-gray-800' : 'bg-gray-50/60 dark:bg-gray-700/30'
                   }`}
                 >
-                  <td className="px-4 py-2 text-gray-500 dark:text-gray-400 whitespace-nowrap text-xs">
+                  <td className="hidden sm:table-cell px-4 py-2 text-gray-500 dark:text-gray-400 whitespace-nowrap text-xs">
                     {formatFecha(entrada.fecha)}
                   </td>
-                  <td className="px-4 py-2 text-gray-700 dark:text-gray-200 max-w-[160px] truncate">
+                  <td className="hidden sm:table-cell px-4 py-2 text-gray-700 dark:text-gray-200 max-w-[160px] truncate">
                     {entrada.etiqueta}
                   </td>
-                  <td className="px-4 py-2 text-right tabular-nums text-gray-700 dark:text-gray-200">
+                  <td className="hidden md:table-cell px-4 py-2 text-right tabular-nums text-gray-700 dark:text-gray-200">
                     {formatCOP(entrada.resultado.salarioBasico)}
                   </td>
                   <td className="px-4 py-2 text-right tabular-nums font-semibold text-green-700 dark:text-green-400">
@@ -86,12 +86,12 @@ export function HistoricoPanel({ entradas, onEliminar, onCargar }: Props) {
                   <td className="px-4 py-2 text-right">
                     {siguiente ? <DeltaBadge delta={deltaNeto} /> : <span className="text-gray-300 dark:text-gray-600 text-xs">—</span>}
                   </td>
-                  <td className="px-4 py-2 text-right tabular-nums text-orange-600 dark:text-orange-400">
+                  <td className="hidden md:table-cell px-4 py-2 text-right tabular-nums text-orange-600 dark:text-orange-400">
                     {entrada.resultado.retencionFuente > 0
                       ? formatCOP(entrada.resultado.retencionFuente)
                       : <span className="text-gray-300 dark:text-gray-600">—</span>}
                   </td>
-                  <td className="px-4 py-2 text-right tabular-nums text-blue-700 dark:text-blue-300">
+                  <td className="hidden md:table-cell px-4 py-2 text-right tabular-nums text-blue-700 dark:text-blue-300">
                     {formatCOP(entrada.resultado.costoTotalEmpresa)}
                   </td>
                   <td className="px-4 py-2">

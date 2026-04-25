@@ -25,7 +25,7 @@ export function InputField({ label, value, onChange, tooltip, type = 'number', m
           min={type === 'number' ? min : undefined}
           step={type === 'number' ? step : undefined}
           onChange={e => onChange(e.target.value)}
-          className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
         />
       </div>
     </div>
